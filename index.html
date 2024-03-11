@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/03761105b5.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Star rating</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="rating">
+        <div class="rating__wrapper" id="rating__wrapper">
+          <div class="circle">
+            <img src="images/icon-star.svg" alt="" />
+          </div>
+
+          <!-- Rating state start -->
+          <h2 class="rating__title title">Оцените нас</h2>
+          <p class="rating__text text">
+            Пожалуйста, сообщите нам, как мы справились с вашим запросом в
+            службу поддержки. Все обратная связь приветствуется, чтобы помочь
+            нам улучшить наше предложение!
+          </p>
+          <!--action="https://jsonplaceholder.typicode.com/posts"
+            method="post"  -->
+          <form
+            class="rating__form"
+            action="https://jsonplaceholder.typicode.com/posts"
+            id="form"
+            method="POST"
+          >
+            <div class="rating__stars">
+              <div class="rating__group">
+                <!-- по умолчанию 0 -->
+                <input
+                  class="star__input"
+                  disabled
+                  checked
+                  name="rating"
+                  value="0"
+                  type="radio"
+                />
+
+                <!-- рейтинг 0.5 -->
+                <label class="star star--half" for="hsr-05">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path
+                      d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"
+                    />
+                  </svg>
+                </label>
+                <input
+                  class="star__input"
+                  name="rating"
+                  id="hsr-05"
+                  value="0.5"
+                  type="radio"
+                />
+
+                <!-- рейтинг 1 -->
+                <label class="star" for="hsr-10">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path
+                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                    />
+                  </svg>
+                </label>
+                <input
+                  class="star__input"
+                  name="rating"
+                  id="hsr-10"
+                  value="1"
+                  type="radio"
+                />
+
+                <!-- рейтинг 1.5 -->
+                <label class="star star--half" for="hsr-15">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path
+                      d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"
+                    />
+                  </svg>
+                </label>
+                <input
+                  class="star__input"
+                  name="rating"
+                  id="hsr-15"
+                  value="1.5"
+                  type="radio"
+                />
+
+                <!-- рейтинг 2 -->
+                <label class="star" for="hsr-20">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path
+                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                    />
+                  </svg>
+                </label>
+                <input
+                  class="star__input"
+                  name="rating"
+                  id="hsr-20"
+                  value="2"
+                  type="radio"
+                />
+
+                <!-- рейтинг 2.5 -->
+                <label class="star star--half" for="hsr-25">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path
+                      d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"
+                    />
+                  </svg>
+                </label>
+                <input
+                  class="star__input"
+                  name="rating"
+                  id="hsr-25"
+                  value="2.5"
+                  type="radio"
+                />
+
+                <!-- рейтинг 3 -->
+                <label class="star" for="hsr-30">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path
+                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                    />
+                  </svg>
+                </label>
+                <input
+                  class="star__input"
+                  name="rating"
+                  id="hsr-30"
+                  value="3"
+                  type="radio"
+                />
+
+                <!-- рейтинг 3.5 -->
+                <label class="star star--half" for="hsr-35">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path
+                      d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"
+                    />
+                  </svg>
+                </label>
+                <input
+                  class="star__input"
+                  name="rating"
+                  id="hsr-35"
+                  value="3.5"
+                  type="radio"
+                />
+
+                <!-- рейтинг 4 -->
+                <label class="star" for="hsr-40">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path
+                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                    />
+                  </svg>
+                </label>
+                <input
+                  class="star__input"
+                  name="rating"
+                  id="hsr-40"
+                  value="4"
+                  type="radio"
+                />
+
+                <!-- рейтинг 4.5 -->
+                <label class="star star--half" for="hsr-45">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path
+                      d="M288 0c-11.4 0-22.8 5.9-28.7 17.8L194 150.2 47.9 171.4c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.1 23 46 46.4 33.7L288 439.6V0z"
+                    />
+                  </svg>
+                </label>
+                <input
+                  class="star__input"
+                  name="rating"
+                  id="hsr-45"
+                  value="4.5"
+                  type="radio"
+                />
+
+                <!-- рейтинг 5 -->
+                <label class="star" for="hsr-50">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path
+                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                    />
+                  </svg>
+                </label>
+                <input
+                  class="star__input"
+                  name="rating"
+                  id="hsr-50"
+                  value="5"
+                  type="radio"
+                />
+              </div>
+            </div>
+
+            <p>Введите ваш отзыв:</p>
+            <textarea name="comment" class="rating__textarea"></textarea>
+            <button
+              type="submit"
+              class="rating__button"
+              id="rating__button"
+              disabled
+            >
+              Отправить
+            </button>
+          </form>
+        </div>
+        <!-- Rating state end -->
+
+        <div class="thanks hidden" id="thanks">
+          <div class="thanks__wrapper">
+            <img src="images/illustration-thank-you.svg" alt="" />
+            <button class="thanks__button" id="reset">
+              <i class="fas fa-undo"></i>
+            </button>
+
+            <div>
+              <p>
+                Вы выбрали <span class="rating__result" id="result"></span> из 5
+              </p>
+            </div>
+            <h2 class="thanks__title title">Спасибо!</h2>
+            <p class="thanks__text text">
+              Мы ценим, что вы нашли время, чтобы дать оценку. Если ты
+              когда-либо нужна дополнительная поддержка, не стесняйтесь
+              обращаться к нам!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Thank you state start -->
+
+    <!-- Thank you state end -->
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >Coded by <a href="#">Elena Kuznetsova</a>.
+    </div> -->
+    <script src="axios.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
